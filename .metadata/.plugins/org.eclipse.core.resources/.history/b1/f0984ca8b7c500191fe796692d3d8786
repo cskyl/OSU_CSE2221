@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Tony Han's Home Page</title>
+</head>
+<body>
+<h1>This is Tony Han's web home page.</h1>
+<p>The course I'm taking now:</p>
+<ul>
+  <li>CSE2221</li>
+  <li>ECE2060</li>
+  <li>ECE2020</li>
+  <li>ECON2001</li>
+  <li>FDSCTE1140</li>
+</ul>  
+<p><a href="https://github.com/tony3641" target="_blank">Visit my Github repositories!</a></p>
+<p style="color:rgb(255, 0, 0);">Go Bucks!</p>
+</body>
+</html>

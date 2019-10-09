@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.0-beta1" sequence="16" timestamp="1569940577537" analysisTimestamp="1569940576306" release="">
+  <Project projectName="HW10">
+    <Jar>C:\Users\tony3\Documents\workspace\HW10\bin\HW10.class</Jar>
+    <AuxClasspathEntry>C:\Users\tony3\Documents\workspace\HW10\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\Documents\workspace\components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_221\lib\rt.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_221\lib\jce.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\tony3\Documents\workspace\HW10\test</SrcDir>
+    <SrcDir>C:\Users\tony3\Documents\workspace\HW10\src</SrcDir>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE" first="2" last="2" removedByChange="true">
+    <Class classname="HW10">
+      <SourceLine classname="HW10" sourcefile="HW10.java" sourcepath="HW10.java"/>
+    </Class>
+    <Method classname="HW10" name="swapNN" signature="(Lcomponents/naturalnumber/NaturalNumber;Lcomponents/naturalnumber/NaturalNumber;)V" isStatic="true">
+      <SourceLine classname="HW10" start="22" end="25" startBytecode="0" endBytecode="11" sourcefile="HW10.java" sourcepath="HW10.java"/>
+    </Method>
+    <LocalVariable name="temp" register="2" pc="9" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="HW10" start="22" end="22" startBytecode="8" endBytecode="8" sourcefile="HW10.java" sourcepath="HW10.java"/>
+    <SourceLine classname="HW10" start="22" end="22" startBytecode="8" endBytecode="8" sourcefile="HW10.java" sourcepath="HW10.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="temp"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE" first="15" last="15" removedByChange="true">
+    <Class classname="HW10">
+      <SourceLine classname="HW10" sourcefile="HW10.java" sourcepath="HW10.java"/>
+    </Class>
+    <Method classname="HW10" name="swapNN2" signature="(Lcomponents/naturalnumber/NaturalNumber;Lcomponents/naturalnumber/NaturalNumber;)V" isStatic="true">
+      <SourceLine classname="HW10" start="39" end="42" startBytecode="0" endBytecode="8" sourcefile="HW10.java" sourcepath="HW10.java"/>
+    </Method>
+    <LocalVariable name="temp" register="2" pc="9" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="HW10" start="39" end="39" startBytecode="8" endBytecode="8" sourcefile="HW10.java" sourcepath="HW10.java"/>
+    <SourceLine classname="HW10" start="39" end="39" startBytecode="8" endBytecode="8" sourcefile="HW10.java" sourcepath="HW10.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="temp"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sun, 29 Sep 2019 19:12:49 -0400" total_classes="1" referenced_classes="16" total_bugs="0" total_size="35" num_packages="1" java_version="1.8.0_221" vm_version="25.221-b11" cpu_seconds="5.83" clock_seconds="1.25" peak_mbytes="489.85" alloc_mbytes="1024.00" gc_seconds="0.04">
+    <PackageStats package="" total_bugs="0" total_types="1" total_size="35">
+      <ClassStats class="HW10" sourceFile="HW10.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="400" invocations="2" avgMicrosecondsPerInvocation="200099" maxMicrosecondsPerInvocation="259218" standardDeviationMicrosecondsPerInvocation="59119"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="173" invocations="329" avgMicrosecondsPerInvocation="526" maxMicrosecondsPerInvocation="19384" standardDeviationMicrosecondsPerInvocation="1376"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="52" invocations="16" avgMicrosecondsPerInvocation="3280" maxMicrosecondsPerInvocation="14281" standardDeviationMicrosecondsPerInvocation="4266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="47" invocations="329" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="1011" standardDeviationMicrosecondsPerInvocation="80"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="43" invocations="62" avgMicrosecondsPerInvocation="696" maxMicrosecondsPerInvocation="5981" standardDeviationMicrosecondsPerInvocation="969"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="41" invocations="16" avgMicrosecondsPerInvocation="2602" maxMicrosecondsPerInvocation="21616" standardDeviationMicrosecondsPerInvocation="6006"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="34" invocations="16" avgMicrosecondsPerInvocation="2136" maxMicrosecondsPerInvocation="10451" standardDeviationMicrosecondsPerInvocation="2816"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="33" invocations="5" avgMicrosecondsPerInvocation="6694" maxMicrosecondsPerInvocation="32284" standardDeviationMicrosecondsPerInvocation="12796"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="30" invocations="16" avgMicrosecondsPerInvocation="1885" maxMicrosecondsPerInvocation="25324" standardDeviationMicrosecondsPerInvocation="6069"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="23" invocations="42" avgMicrosecondsPerInvocation="562" maxMicrosecondsPerInvocation="13215" standardDeviationMicrosecondsPerInvocation="2048"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1569707725919" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1569707725920" release="" codeSize="3" numClasses="1"/>
+    <AppVersion sequence="2" timestamp="1569708151386" release="" codeSize="19" numClasses="1"/>
+    <AppVersion sequence="3" timestamp="1569708216686" release="" codeSize="19" numClasses="1"/>
+    <AppVersion sequence="4" timestamp="1569708493129" release="" codeSize="25" numClasses="1"/>
+    <AppVersion sequence="5" timestamp="1569708576888" release="" codeSize="27" numClasses="1"/>
+    <AppVersion sequence="6" timestamp="1569708666852" release="" codeSize="9" numClasses="1"/>
+    <AppVersion sequence="7" timestamp="1569708710681" release="" codeSize="29" numClasses="1"/>
+    <AppVersion sequence="8" timestamp="1569708780910" release="" codeSize="30" numClasses="1"/>
+    <AppVersion sequence="9" timestamp="1569708802923" release="" codeSize="30" numClasses="1"/>
+    <AppVersion sequence="10" timestamp="1569708852997" release="" codeSize="30" numClasses="1"/>
+    <AppVersion sequence="11" timestamp="1569709504561" release="" codeSize="30" numClasses="1"/>
+    <AppVersion sequence="12" timestamp="1569709603611" release="" codeSize="35" numClasses="1"/>
+    <AppVersion sequence="13" timestamp="1569709622801" release="" codeSize="35" numClasses="1"/>
+    <AppVersion sequence="14" timestamp="1569709638543" release="" codeSize="35" numClasses="1"/>
+    <AppVersion sequence="15" timestamp="1569709677116" release="" codeSize="34" numClasses="1"/>
+  </History>
+</BugCollection>

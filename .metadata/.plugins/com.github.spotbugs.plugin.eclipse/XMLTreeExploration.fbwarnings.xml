@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.0-beta1" sequence="15" timestamp="1568386863559" analysisTimestamp="1568386863305" release="">
+  <Project projectName="XMLTreeExploration">
+    <Jar>C:\Users\tony3\Documents\workspace\XMLTreeExploration\bin\ProgramWithIO.class</Jar>
+    <AuxClasspathEntry>C:\Users\tony3\Documents\workspace\XMLTreeExploration\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\Documents\workspace\components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_221\lib\rt.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_221\lib\jce.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\tony3\Documents\workspace\XMLTreeExploration\test</SrcDir>
+    <SrcDir>C:\Users\tony3\Documents\workspace\XMLTreeExploration\src</SrcDir>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE" first="1" last="1" removedByChange="true">
+    <Class classname="ProgramWithIO">
+      <SourceLine classname="ProgramWithIO" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    </Class>
+    <Method classname="ProgramWithIO" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="ProgramWithIO" start="29" end="42" startBytecode="0" endBytecode="17" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    </Method>
+    <LocalVariable name="xml" register="3" pc="26" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="ProgramWithIO" start="34" end="34" startBytecode="25" endBytecode="25" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    <SourceLine classname="ProgramWithIO" start="34" end="34" startBytecode="25" endBytecode="25" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="xml"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" first="6" last="6" removedByChange="true">
+    <Class classname="ProgramWithIO">
+      <SourceLine classname="ProgramWithIO" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    </Class>
+    <Method classname="ProgramWithIO" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="ProgramWithIO" start="29" end="46" startBytecode="0" endBytecode="43" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    </Method>
+    <LocalVariable name="results" register="4" pc="35" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="ProgramWithIO" start="37" end="37" startBytecode="33" endBytecode="33" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    <SourceLine classname="ProgramWithIO" start="37" end="37" startBytecode="33" endBytecode="33" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="results"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" priority="2" rank="17" abbrev="RV" category="STYLE" first="2" last="2" removedByChange="true">
+    <Class classname="ProgramWithIO">
+      <SourceLine classname="ProgramWithIO" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    </Class>
+    <Method classname="ProgramWithIO" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="ProgramWithIO" start="29" end="43" startBytecode="0" endBytecode="149" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    </Method>
+    <Method classname="components.xmltree.XMLTree" name="toString" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="components.xmltree.XMLTree"/>
+    </Method>
+    <SourceLine classname="ProgramWithIO" start="37" end="37" startBytecode="27" endBytecode="27" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    <SourceLine classname="ProgramWithIO" start="37" end="37" startBytecode="27" endBytecode="27" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Fri, 13 Sep 2019 11:01:03 -0400" total_classes="1" referenced_classes="16" total_bugs="0" total_size="22" num_packages="1" java_version="1.8.0_221" vm_version="25.221-b11" cpu_seconds="0.92" clock_seconds="0.25" peak_mbytes="506.73" alloc_mbytes="1024.00" gc_seconds="0.00">
+    <PackageStats package="" total_bugs="0" total_types="1" total_size="22">
+      <ClassStats class="ProgramWithIO" sourceFile="ProgramWithIO.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="75" invocations="357" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="2990" standardDeviationMicrosecondsPerInvocation="435"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="59" invocations="2" avgMicrosecondsPerInvocation="29899" maxMicrosecondsPerInvocation="52582" standardDeviationMicrosecondsPerInvocation="22683"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="36" invocations="357" avgMicrosecondsPerInvocation="102" maxMicrosecondsPerInvocation="522" standardDeviationMicrosecondsPerInvocation="46"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1568385065019" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1568385065022" release="" codeSize="12" numClasses="1"/>
+    <AppVersion sequence="2" timestamp="1568385085602" release="" codeSize="13" numClasses="1"/>
+    <AppVersion sequence="3" timestamp="1568385113350" release="" codeSize="13" numClasses="1"/>
+    <AppVersion sequence="4" timestamp="1568385134395" release="" codeSize="14" numClasses="1"/>
+    <AppVersion sequence="5" timestamp="1568385387679" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="6" timestamp="1568385494804" release="" codeSize="16" numClasses="1"/>
+    <AppVersion sequence="7" timestamp="1568385571395" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="8" timestamp="1568385747133" release="" codeSize="20" numClasses="1"/>
+    <AppVersion sequence="9" timestamp="1568385838970" release="" codeSize="21" numClasses="1"/>
+    <AppVersion sequence="10" timestamp="1568386266460" release="" codeSize="16" numClasses="1"/>
+    <AppVersion sequence="11" timestamp="1568386361987" release="" codeSize="18" numClasses="1"/>
+    <AppVersion sequence="12" timestamp="1568386708908" release="" codeSize="21" numClasses="1"/>
+    <AppVersion sequence="13" timestamp="1568386725785" release="" codeSize="21" numClasses="1"/>
+    <AppVersion sequence="14" timestamp="1568386849520" release="" codeSize="22" numClasses="1"/>
+  </History>
+</BugCollection>

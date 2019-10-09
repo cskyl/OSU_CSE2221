@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Tony Han's Home Page</title>
+
+<style type="text/css">
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: Center;
+  padding: 8px;
+}
+
+tr:nth-child(2n) {
+  background-color: #d91c1c;
+}
+tr:nth-child(odd){
+  background-color: #918c8c;
+}
+</style>
+
+</head>
+<body>
+<h1>Tony Han's web home page.</h1>
+<p>This is Tony Han, an Ohio State sophomore from China majoring in Electrical and Computer Engineering.</p>
+<img src='thumbnail_mmexport1556162428226.jpg' alt="My Photo" width="400" height="240"></img>
+<p>The course I'm taking this semester:</p>
+<ul>
+  <li>CSE2221</li>
+  <li>ECE2060</li>
+  <li>ECE2020</li>
+  <li>ECON2001</li>
+  <li>FDSCTE1140</li>
+</ul>
+<h2>Ohio State Football Game Schedule (August and September)</h2>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Home</th>
+    <th>Guest</th>
+  </tr>
+  <tr>
+    <td>Aug.31</td>
+    <td>Ohio State</td>
+    <td>Florida Atlantic</td>
+  </tr>
+  <tr>
+    <td>Sept. 7</td>
+    <td>Ohio State</td>
+    <td>Cincinnati</td>
+  </tr>
+  <tr>
+    <td>Sept. 14</td>
+    <td>Indiana</td>
+    <td>Ohio State</td>
+  </tr>
+  <tr>
+    <td>Sept. 21</td>
+    <td>Ohio State</td>
+    <td>Miami(Ohio)</td>
+  </tr>
+  <tr>
+    <td>Sept. 28</td>
+    <td>Nebraska</td>
+    <td>Ohio State</td>
+  </tr>
+</table>
+
+<p><a href="https://github.com/tony3641">Visit my Github repositories!</a></p>
+
+<p style="color:rgb(255, 0, 0);">Go Bucks!</p>
+
+</body>
+</html>

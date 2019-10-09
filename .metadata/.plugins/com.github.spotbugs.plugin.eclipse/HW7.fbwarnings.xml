@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.0-beta1" sequence="37" timestamp="1568661767752" analysisTimestamp="1568661767585" release="">
+  <Project projectName="HW7">
+    <Jar>C:\Users\tony3\Documents\workspace\HW7\bin\ProgramWithIO.class</Jar>
+    <AuxClasspathEntry>C:\Users\tony3\Documents\workspace\HW7\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\Documents\workspace\components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_221\lib\rt.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_221\lib\jce.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\tony3\Documents\workspace\HW7\test</SrcDir>
+    <SrcDir>C:\Users\tony3\Documents\workspace\HW7\src</SrcDir>
+  </Project>
+  <BugInstance type="IL_INFINITE_LOOP" priority="1" rank="8" abbrev="IL" category="CORRECTNESS" first="11" last="11" removedByChange="true">
+    <Class classname="ProgramWithIO">
+      <SourceLine classname="ProgramWithIO" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    </Class>
+    <Method classname="ProgramWithIO" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="ProgramWithIO" start="27" end="42" startBytecode="0" endBytecode="328" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    </Method>
+    <SourceLine classname="ProgramWithIO" start="33" end="33" startBytecode="100" endBytecode="100" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    <LocalVariable name="j" register="6" pc="100" role="LOCAL_VARIABLE_NAMED"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED" priority="1" rank="3" abbrev="RV" category="CORRECTNESS" first="11" last="13" removedByChange="true">
+    <Class classname="ProgramWithIO">
+      <SourceLine classname="ProgramWithIO" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    </Class>
+    <Method classname="ProgramWithIO" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="ProgramWithIO" start="27" end="42" startBytecode="0" endBytecode="328" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="replace" signature="(CC)Ljava/lang/String;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String"/>
+    </Method>
+    <SourceLine classname="ProgramWithIO" start="35" end="35" startBytecode="88" endBytecode="88" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    <SourceLine classname="ProgramWithIO" start="35" end="35" startBytecode="88" endBytecode="88" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE" first="1" last="9" removedByChange="true">
+    <Class classname="ProgramWithIO">
+      <SourceLine classname="ProgramWithIO" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    </Class>
+    <Method classname="ProgramWithIO" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="ProgramWithIO" start="27" end="37" startBytecode="0" endBytecode="255" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+    </Method>
+    <SourceLine classname="ProgramWithIO" start="32" end="32" startBytecode="33" endBytecode="33" sourcefile="ProgramWithIO.java" sourcepath="ProgramWithIO.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 16 Sep 2019 15:22:47 -0400" total_classes="1" referenced_classes="16" total_bugs="0" total_size="13" num_packages="1" java_version="1.8.0_221" vm_version="25.221-b11" cpu_seconds="0.33" clock_seconds="0.17" peak_mbytes="711.98" alloc_mbytes="1024.00" gc_seconds="0.00">
+    <PackageStats package="" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="ProgramWithIO" sourceFile="ProgramWithIO.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="53" invocations="356" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="2792" standardDeviationMicrosecondsPerInvocation="321"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="46" invocations="2" avgMicrosecondsPerInvocation="23109" maxMicrosecondsPerInvocation="41322" standardDeviationMicrosecondsPerInvocation="18213"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="25" invocations="356" avgMicrosecondsPerInvocation="72" maxMicrosecondsPerInvocation="354" standardDeviationMicrosecondsPerInvocation="31"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1568656229945" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1568656229947" release="" codeSize="25" numClasses="2"/>
+    <AppVersion sequence="2" timestamp="1568656304407" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="3" timestamp="1568656347223" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="4" timestamp="1568656359033" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="5" timestamp="1568656550401" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="6" timestamp="1568656565261" release="" codeSize="14" numClasses="1"/>
+    <AppVersion sequence="7" timestamp="1568656586944" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="8" timestamp="1568656599370" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="9" timestamp="1568656636006" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="10" timestamp="1568658132292" release="" codeSize="4" numClasses="1"/>
+    <AppVersion sequence="11" timestamp="1568658145364" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="12" timestamp="1568658184208" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="13" timestamp="1568658313727" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="14" timestamp="1568658362206" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="15" timestamp="1568658393410" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="16" timestamp="1568658683770" release="" codeSize="18" numClasses="1"/>
+    <AppVersion sequence="17" timestamp="1568659000096" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="18" timestamp="1568659018848" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="19" timestamp="1568659155495" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="20" timestamp="1568659276387" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="21" timestamp="1568659322484" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="22" timestamp="1568659363303" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="23" timestamp="1568659410519" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="24" timestamp="1568659601968" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="25" timestamp="1568659660370" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="26" timestamp="1568659701921" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="27" timestamp="1568660072933" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="28" timestamp="1568660346030" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="29" timestamp="1568660618142" release="" codeSize="16" numClasses="1"/>
+    <AppVersion sequence="30" timestamp="1568660628368" release="" codeSize="16" numClasses="1"/>
+    <AppVersion sequence="31" timestamp="1568660633752" release="" codeSize="16" numClasses="1"/>
+    <AppVersion sequence="32" timestamp="1568660639933" release="" codeSize="16" numClasses="1"/>
+    <AppVersion sequence="33" timestamp="1568661541198" release="" codeSize="12" numClasses="1"/>
+    <AppVersion sequence="34" timestamp="1568661606588" release="" codeSize="12" numClasses="1"/>
+    <AppVersion sequence="35" timestamp="1568661659569" release="" codeSize="12" numClasses="1"/>
+    <AppVersion sequence="36" timestamp="1568661743073" release="" codeSize="12" numClasses="1"/>
+  </History>
+</BugCollection>

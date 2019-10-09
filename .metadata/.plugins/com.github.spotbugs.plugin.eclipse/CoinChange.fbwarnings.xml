@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.0-beta1" sequence="8" timestamp="1567610123659" analysisTimestamp="1567610123285" release="">
+  <Project projectName="CoinChange">
+    <Jar>C:\Users\tony3\Documents\workspace\CoinChange\bin\CoinChange2.class</Jar>
+    <AuxClasspathEntry>C:\Users\tony3\Documents\workspace\CoinChange\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\Documents\workspace\components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_221\lib\rt.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_221\lib\jce.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\tony3\Documents\workspace\CoinChange\src</SrcDir>
+    <SrcDir>C:\Users\tony3\Documents\workspace\CoinChange\test</SrcDir>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Wed, 4 Sep 2019 11:15:22 -0400" total_classes="1" referenced_classes="14" total_bugs="0" total_size="19" num_packages="1" java_version="1.8.0_221" vm_version="25.221-b11" cpu_seconds="2.22" clock_seconds="0.37" peak_mbytes="545.54" alloc_mbytes="1024.00" gc_seconds="0.03">
+    <PackageStats package="" total_bugs="0" total_types="1" total_size="19">
+      <ClassStats class="CoinChange2" sourceFile="CoinChange2.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="86" invocations="324" avgMicrosecondsPerInvocation="267" maxMicrosecondsPerInvocation="4736" standardDeviationMicrosecondsPerInvocation="519"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="67" invocations="2" avgMicrosecondsPerInvocation="33960" maxMicrosecondsPerInvocation="58313" standardDeviationMicrosecondsPerInvocation="24353"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="49" invocations="324" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="1611" standardDeviationMicrosecondsPerInvocation="105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="39" invocations="14" avgMicrosecondsPerInvocation="2795" maxMicrosecondsPerInvocation="23882" standardDeviationMicrosecondsPerInvocation="6059"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="30" invocations="289" avgMicrosecondsPerInvocation="105" maxMicrosecondsPerInvocation="17017" standardDeviationMicrosecondsPerInvocation="999"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="12" invocations="60" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="738" standardDeviationMicrosecondsPerInvocation="181"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1567607446525" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1567607446525" release="" codeSize="10" numClasses="1"/>
+    <AppVersion sequence="2" timestamp="1567608116272" release="" codeSize="18" numClasses="1"/>
+    <AppVersion sequence="3" timestamp="1567608201859" release="" codeSize="18" numClasses="1"/>
+    <AppVersion sequence="4" timestamp="1567608407359" release="" codeSize="19" numClasses="1"/>
+    <AppVersion sequence="5" timestamp="1567608431816" release="" codeSize="19" numClasses="1"/>
+    <AppVersion sequence="6" timestamp="1567608575900" release="" codeSize="10" numClasses="1"/>
+    <AppVersion sequence="7" timestamp="1567608588451" release="" codeSize="10" numClasses="1"/>
+  </History>
+</BugCollection>

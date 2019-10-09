@@ -1,0 +1,6 @@
+<feeds title="Top Stories">
+<feed url="https://www.nasa.gov/rss/dyn/breaking_news.rss" name="NASA Breaking News" file="nasa.html"/>
+<feed url="http://www.osu.edu/rss.php?feed=Features" name="Ohio State University Features" file="osu.html"/>
+<feed url="http://feeds.arstechnica.com/arstechnica/index.rss" name="Ars Technica" file="ars.html"/>
+<feed url="https://rss.packetstormsecurity.com/news/" name="News - Packet Storm" file="packetstorm.html"/>
+</feeds>

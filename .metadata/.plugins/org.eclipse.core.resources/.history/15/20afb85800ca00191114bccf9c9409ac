@@ -1,0 +1,34 @@
+/**
+ * Simple HelloWorld program (clear of Checkstyle and FindBugs warnings).
+ *
+ * @author P. Bucci
+ */
+public final class HelloWorld {
+
+    /**
+     * Default constructor--private to prevent instantiation.
+     */
+    private HelloWorld() {
+        // no code needed here
+    }
+
+    /**
+     * Main method.
+     *
+     * @param args
+     *            the command line arguments; unused here
+     */
+    public static void main(String[] args) {
+        int areaBound = 0;
+        int sum = 0;
+        int m = 1, n = 1;
+        while (m * m < areaBound) {
+            while (n * n < areaBound) {
+                sum = sum + n * n + m * m;
+            }
+            n++;
+        }
+        m++;
+    }
+
+}

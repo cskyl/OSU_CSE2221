@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.0-beta1" sequence="6" timestamp="1570115701823" analysisTimestamp="1570115701425" release="">
+  <Project projectName="MyProject">
+    <Jar>C:\Users\tony3\Documents\workspace\MyProject\bin\HelloWorld.class</Jar>
+    <AuxClasspathEntry>C:\Users\tony3\Documents\workspace\MyProject\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\Documents\workspace\components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_221\lib\rt.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_221\lib\jce.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\tony3\Documents\workspace\MyProject\test</SrcDir>
+    <SrcDir>C:\Users\tony3\Documents\workspace\MyProject\src</SrcDir>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" first="3" last="4" removedByChange="true">
+    <Class classname="HelloWorld">
+      <SourceLine classname="HelloWorld" sourcefile="HelloWorld.java" sourcepath="HelloWorld.java"/>
+    </Class>
+    <Method classname="HelloWorld" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="HelloWorld" start="25" end="32" startBytecode="0" endBytecode="61" sourcefile="HelloWorld.java" sourcepath="HelloWorld.java"/>
+    </Method>
+    <LocalVariable name="b" register="2" pc="50" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="HelloWorld" start="26" end="26" startBytecode="49" endBytecode="49" sourcefile="HelloWorld.java" sourcepath="HelloWorld.java"/>
+    <SourceLine classname="HelloWorld" start="26" end="26" startBytecode="49" endBytecode="49" sourcefile="HelloWorld.java" sourcepath="HelloWorld.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.COPY_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="b"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" first="5">
+    <Class classname="HelloWorld">
+      <SourceLine classname="HelloWorld" sourcefile="HelloWorld.java" sourcepath="HelloWorld.java"/>
+    </Class>
+    <Method classname="HelloWorld" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="HelloWorld" start="39" end="46" startBytecode="0" endBytecode="94" sourcefile="HelloWorld.java" sourcepath="HelloWorld.java"/>
+    </Method>
+    <LocalVariable name="outout" register="4" pc="107" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="HelloWorld" start="43" end="43" startBytecode="105" endBytecode="105" sourcefile="HelloWorld.java" sourcepath="HelloWorld.java"/>
+    <SourceLine classname="HelloWorld" start="43" end="43" startBytecode="105" endBytecode="105" sourcefile="HelloWorld.java" sourcepath="HelloWorld.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.COPY_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="outout"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="SA_LOCAL_SELF_COMPARISON" priority="1" rank="1" abbrev="SA" category="CORRECTNESS" first="2" last="2" removedByChange="true">
+    <Class classname="HelloWorld">
+      <SourceLine classname="HelloWorld" sourcefile="HelloWorld.java" sourcepath="HelloWorld.java"/>
+    </Class>
+    <Method classname="HelloWorld" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="HelloWorld" start="25" end="31" startBytecode="0" endBytecode="59" sourcefile="HelloWorld.java" sourcepath="HelloWorld.java"/>
+    </Method>
+    <LocalVariable name="a" register="1" pc="65" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="HelloWorld" start="29" end="29" startBytecode="66" endBytecode="66" sourcefile="HelloWorld.java" sourcepath="HelloWorld.java"/>
+  </BugInstance>
+  <BugInstance type="SA_LOCAL_SELF_COMPARISON" priority="1" rank="1" abbrev="SA" category="CORRECTNESS" first="4" last="4" removedByChange="true">
+    <Class classname="HelloWorld">
+      <SourceLine classname="HelloWorld" sourcefile="HelloWorld.java" sourcepath="HelloWorld.java"/>
+    </Class>
+    <Method classname="HelloWorld" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="HelloWorld" start="25" end="32" startBytecode="0" endBytecode="61" sourcefile="HelloWorld.java" sourcepath="HelloWorld.java"/>
+    </Method>
+    <LocalVariable name="out" register="3" pc="69" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="HelloWorld" start="30" end="30" startBytecode="70" endBytecode="70" sourcefile="HelloWorld.java" sourcepath="HelloWorld.java"/>
+  </BugInstance>
+  <BugInstance type="UC_USELESS_OBJECT" priority="2" rank="17" abbrev="UC" category="STYLE" first="3" last="4" removedByChange="true">
+    <Class classname="HelloWorld">
+      <SourceLine classname="HelloWorld" sourcefile="HelloWorld.java" sourcepath="HelloWorld.java"/>
+    </Class>
+    <Method classname="HelloWorld" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="HelloWorld" start="25" end="32" startBytecode="0" endBytecode="258" sourcefile="HelloWorld.java" sourcepath="HelloWorld.java"/>
+    </Method>
+    <String value="a"/>
+    <Type descriptor="[I"/>
+    <SourceLine classname="HelloWorld" start="25" end="25" startBytecode="2" endBytecode="2" sourcefile="HelloWorld.java" sourcepath="HelloWorld.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Thu, 3 Oct 2019 11:15:01 -0400" total_classes="1" referenced_classes="12" total_bugs="1" total_size="22" num_packages="1" java_version="1.8.0_221" vm_version="25.221-b11" cpu_seconds="1.75" clock_seconds="0.40" peak_mbytes="687.46" alloc_mbytes="1024.00" gc_seconds="0.02" priority_2="1">
+    <PackageStats package="" total_bugs="1" total_types="1" total_size="22" priority_2="1">
+      <ClassStats class="HelloWorld" sourceFile="HelloWorld.java" interface="false" size="22" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="94" invocations="315" avgMicrosecondsPerInvocation="301" maxMicrosecondsPerInvocation="6141" standardDeviationMicrosecondsPerInvocation="642"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="86" invocations="2" avgMicrosecondsPerInvocation="43016" maxMicrosecondsPerInvocation="75618" standardDeviationMicrosecondsPerInvocation="32602"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="35" invocations="315" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="713" standardDeviationMicrosecondsPerInvocation="60"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="31" invocations="281" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="20201" standardDeviationMicrosecondsPerInvocation="1202"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="20" invocations="60" avgMicrosecondsPerInvocation="341" maxMicrosecondsPerInvocation="2477" standardDeviationMicrosecondsPerInvocation="408"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="19" invocations="12" avgMicrosecondsPerInvocation="1615" maxMicrosecondsPerInvocation="6088" standardDeviationMicrosecondsPerInvocation="1976"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1569940756557" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1569940756557" release="" codeSize="12" numClasses="1"/>
+    <AppVersion sequence="2" timestamp="1569940912177" release="" codeSize="12" numClasses="1"/>
+    <AppVersion sequence="3" timestamp="1569940995498" release="" codeSize="13" numClasses="1"/>
+    <AppVersion sequence="4" timestamp="1569941022142" release="" codeSize="13" numClasses="1"/>
+    <AppVersion sequence="5" timestamp="1569941068215" release="" codeSize="12" numClasses="1"/>
+  </History>
+</BugCollection>

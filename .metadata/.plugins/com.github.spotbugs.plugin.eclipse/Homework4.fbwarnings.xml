@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.0-beta1" sequence="8" timestamp="1567385719516" analysisTimestamp="1567385719198" release="">
+  <Project projectName="Homework4">
+    <Jar>C:\Users\tony3\Documents\workspace\Homework4\bin\HelloWorld.class</Jar>
+    <AuxClasspathEntry>C:\Users\tony3\Documents\workspace\Homework4\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\Documents\workspace\components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_221\lib\rt.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_221\lib\jce.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\tony3\Documents\workspace\Homework4\src</SrcDir>
+    <SrcDir>C:\Users\tony3\Documents\workspace\Homework4\test</SrcDir>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sun, 1 Sep 2019 20:55:19 -0400" total_classes="1" referenced_classes="13" total_bugs="0" total_size="27" num_packages="1" java_version="1.8.0_221" vm_version="25.221-b11" cpu_seconds="1.75" clock_seconds="0.32" peak_mbytes="560.76" alloc_mbytes="1024.00" gc_seconds="0.01">
+    <PackageStats package="" total_bugs="0" total_types="1" total_size="27">
+      <ClassStats class="HelloWorld" sourceFile="HelloWorld.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="78" invocations="2" avgMicrosecondsPerInvocation="39243" maxMicrosecondsPerInvocation="70002" standardDeviationMicrosecondsPerInvocation="30759"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="77" invocations="302" avgMicrosecondsPerInvocation="257" maxMicrosecondsPerInvocation="11067" standardDeviationMicrosecondsPerInvocation="750"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="61" invocations="302" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="955" standardDeviationMicrosecondsPerInvocation="180"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1567352898316" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1567352898318" release="" codeSize="16" numClasses="1"/>
+    <AppVersion sequence="2" timestamp="1567352906490" release="" codeSize="16" numClasses="1"/>
+    <AppVersion sequence="3" timestamp="1567352912373" release="" codeSize="16" numClasses="1"/>
+    <AppVersion sequence="4" timestamp="1567352935062" release="" codeSize="16" numClasses="1"/>
+    <AppVersion sequence="5" timestamp="1567352940351" release="" codeSize="16" numClasses="1"/>
+    <AppVersion sequence="6" timestamp="1567353008683" release="" codeSize="16" numClasses="1"/>
+    <AppVersion sequence="7" timestamp="1567353017302" release="" codeSize="16" numClasses="1"/>
+  </History>
+</BugCollection>

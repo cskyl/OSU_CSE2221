@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.0-beta1" sequence="9" timestamp="1567955842613" analysisTimestamp="1567955840989" release="">
+  <Project projectName="ProjectTemplate">
+    <Jar>C:\Users\tony3\Documents\workspace\ProjectTemplate\bin\PasswordChecker.class</Jar>
+    <AuxClasspathEntry>C:\Users\tony3\Documents\workspace\ProjectTemplate\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\Documents\workspace\components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_221\lib\rt.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_221\lib\jce.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\tony3\Documents\workspace\ProjectTemplate\src</SrcDir>
+    <SrcDir>C:\Users\tony3\Documents\workspace\ProjectTemplate\test</SrcDir>
+  </Project>
+  <BugInstance type="ES_COMPARING_STRINGS_WITH_EQ" priority="2" rank="11" abbrev="ES" category="BAD_PRACTICE" first="7" last="7" removedByChange="true">
+    <Class classname="PasswordChecker">
+      <SourceLine classname="PasswordChecker" sourcefile="PasswordChecker.java" sourcepath="PasswordChecker.java"/>
+    </Class>
+    <Method classname="PasswordChecker" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="PasswordChecker" start="110" end="127" startBytecode="0" endBytecode="31" sourcefile="PasswordChecker.java" sourcepath="PasswordChecker.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String"/>
+    </Type>
+    <String value="" role="STRING_CONSTANT"/>
+    <LocalVariable name="password" register="3" pc="55" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="PasswordChecker" start="116" end="116" startBytecode="57" endBytecode="57" sourcefile="PasswordChecker.java" sourcepath="PasswordChecker.java"/>
+    <SourceLine classname="PasswordChecker" start="116" end="116" startBytecode="57" endBytecode="57" sourcefile="PasswordChecker.java" sourcepath="PasswordChecker.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.EMPTY_AND_UNKNOWN" value="true"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sun, 8 Sep 2019 11:16:29 -0400" total_classes="1" referenced_classes="15" total_bugs="0" total_size="53" num_packages="1" java_version="1.8.0_221" vm_version="25.221-b11" cpu_seconds="9.23" clock_seconds="1.65" peak_mbytes="524.62" alloc_mbytes="1024.00" gc_seconds="0.07">
+    <PackageStats package="" total_bugs="0" total_types="1" total_size="53">
+      <ClassStats class="PasswordChecker" sourceFile="PasswordChecker.java" interface="false" size="53" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="508" invocations="2" avgMicrosecondsPerInvocation="254356" maxMicrosecondsPerInvocation="347254" standardDeviationMicrosecondsPerInvocation="92897"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="221" invocations="325" avgMicrosecondsPerInvocation="680" maxMicrosecondsPerInvocation="22115" standardDeviationMicrosecondsPerInvocation="1877"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="69" invocations="325" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="15370" standardDeviationMicrosecondsPerInvocation="849"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="67" invocations="15" avgMicrosecondsPerInvocation="4522" maxMicrosecondsPerInvocation="19551" standardDeviationMicrosecondsPerInvocation="5655"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="46" invocations="73" avgMicrosecondsPerInvocation="642" maxMicrosecondsPerInvocation="5205" standardDeviationMicrosecondsPerInvocation="828"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="40" invocations="15" avgMicrosecondsPerInvocation="2728" maxMicrosecondsPerInvocation="10800" standardDeviationMicrosecondsPerInvocation="3238"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="35" invocations="7" avgMicrosecondsPerInvocation="5067" maxMicrosecondsPerInvocation="33703" standardDeviationMicrosecondsPerInvocation="11691"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="32" invocations="15" avgMicrosecondsPerInvocation="2137" maxMicrosecondsPerInvocation="18827" standardDeviationMicrosecondsPerInvocation="4638"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="30" invocations="37" avgMicrosecondsPerInvocation="836" maxMicrosecondsPerInvocation="17975" standardDeviationMicrosecondsPerInvocation="2954"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="27" invocations="292" avgMicrosecondsPerInvocation="92" maxMicrosecondsPerInvocation="1430" standardDeviationMicrosecondsPerInvocation="177"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="25" invocations="15" avgMicrosecondsPerInvocation="1732" maxMicrosecondsPerInvocation="9150" standardDeviationMicrosecondsPerInvocation="2294"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="25" invocations="15" avgMicrosecondsPerInvocation="1685" maxMicrosecondsPerInvocation="25143" standardDeviationMicrosecondsPerInvocation="6269"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1566398401038" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1566398401038" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="2" timestamp="1567779706068" release="" codeSize="13" numClasses="1"/>
+    <AppVersion sequence="3" timestamp="1567780713864" release="" codeSize="41" numClasses="1"/>
+    <AppVersion sequence="4" timestamp="1567780897221" release="" codeSize="43" numClasses="1"/>
+    <AppVersion sequence="5" timestamp="1567781627774" release="" codeSize="56" numClasses="1"/>
+    <AppVersion sequence="6" timestamp="1567781667235" release="" codeSize="56" numClasses="1"/>
+    <AppVersion sequence="7" timestamp="1567781695574" release="" codeSize="56" numClasses="1"/>
+    <AppVersion sequence="8" timestamp="1567781771293" release="" codeSize="57" numClasses="1"/>
+  </History>
+</BugCollection>

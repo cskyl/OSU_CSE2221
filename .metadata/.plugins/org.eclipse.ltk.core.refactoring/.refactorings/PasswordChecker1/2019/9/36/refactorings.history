@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ProgramWithIOAndStaticMethod&apos; to &apos;PasswordChecker&apos;&#x0D;&#x0A;- Original project: &apos;ProjectTemplate&apos;&#x0D;&#x0A;- Original element: &apos;ProgramWithIOAndStaticMethod&apos;&#x0D;&#x0A;- Renamed element: &apos;PasswordChecker&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ProgramWithIOAndStaticMethod&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{ProgramWithIOAndStaticMethod.java[ProgramWithIOAndStaticMethod" matchStrategy="1" name="PasswordChecker" qualified="false" references="true" similarDeclarations="false" stamp="1567779704386" textual="false" version="1.0"/>
+</session>

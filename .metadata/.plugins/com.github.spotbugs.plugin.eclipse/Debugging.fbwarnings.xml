@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.0-beta1" sequence="11" timestamp="1569343558640" analysisTimestamp="1569343558211" release="">
+  <Project projectName="Debugging">
+    <Jar>C:\Users\tony3\Documents\workspace\Debugging\bin\IntegerDivision.class</Jar>
+    <AuxClasspathEntry>C:\Users\tony3\Documents\workspace\Debugging\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\Documents\workspace\components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\tony3\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_221\lib\rt.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_221\lib\jce.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\tony3\Documents\workspace\Debugging\src</SrcDir>
+    <SrcDir>C:\Users\tony3\Documents\workspace\Debugging\test</SrcDir>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 24 Sep 2019 12:45:58 -0400" total_classes="1" referenced_classes="13" total_bugs="0" total_size="13" num_packages="1" java_version="1.8.0_221" vm_version="25.221-b11" cpu_seconds="1.70" clock_seconds="0.43" peak_mbytes="523.95" alloc_mbytes="1024.00" gc_seconds="0.01">
+    <PackageStats package="" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="IntegerDivision" sourceFile="IntegerDivision.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="138" invocations="314" avgMicrosecondsPerInvocation="441" maxMicrosecondsPerInvocation="16072" standardDeviationMicrosecondsPerInvocation="1138"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="72" invocations="2" avgMicrosecondsPerInvocation="36018" maxMicrosecondsPerInvocation="63772" standardDeviationMicrosecondsPerInvocation="27753"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="34" invocations="314" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="381" standardDeviationMicrosecondsPerInvocation="49"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="22" invocations="64" avgMicrosecondsPerInvocation="348" maxMicrosecondsPerInvocation="1256" standardDeviationMicrosecondsPerInvocation="288"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="21" invocations="13" avgMicrosecondsPerInvocation="1673" maxMicrosecondsPerInvocation="6732" standardDeviationMicrosecondsPerInvocation="2011"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="14" invocations="13" avgMicrosecondsPerInvocation="1131" maxMicrosecondsPerInvocation="6363" standardDeviationMicrosecondsPerInvocation="1631"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1568990115166" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1568990115166" release="" codeSize="10" numClasses="1"/>
+    <AppVersion sequence="2" timestamp="1568990136669" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="3" timestamp="1568990650262" release="" codeSize="9" numClasses="1"/>
+    <AppVersion sequence="4" timestamp="1568990742192" release="" codeSize="17" numClasses="1"/>
+    <AppVersion sequence="5" timestamp="1568991632023" release="" codeSize="9" numClasses="1"/>
+    <AppVersion sequence="6" timestamp="1568991695016" release="" codeSize="9" numClasses="1"/>
+    <AppVersion sequence="7" timestamp="1568991725196" release="" codeSize="11" numClasses="1"/>
+    <AppVersion sequence="8" timestamp="1568991769718" release="" codeSize="13" numClasses="1"/>
+    <AppVersion sequence="9" timestamp="1568992018784" release="" codeSize="13" numClasses="1"/>
+    <AppVersion sequence="10" timestamp="1568992029783" release="" codeSize="13" numClasses="1"/>
+  </History>
+</BugCollection>
