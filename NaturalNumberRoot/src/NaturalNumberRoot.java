@@ -59,19 +59,25 @@ public final class NaturalNumberRoot {
      * @requires r >= 2
      * @ensures n ^ (r) <= #n < (n + 1) ^ (r)
      */
-    /*
-     * public static void root(NaturalNumber n, int r) { assert n != null :
-     * "Violation of: n is  not null"; assert r >= 2 : "Violation of: r >= 2";
-     * 
-     * // TODO - fill in body boolean tooBig=true; boolean tooSmall=true;
-     * NaturalNumber min=new NaturalNumber2(0); NaturalNumber max=new
-     * NaturalNumber2(n); NaturalNumber one=new NaturalNumber2(1); NaturalNumber
-     * sub=max; sub.subtract(min); if(sub.equals(one)) {
-     * 
-     * }else { if() //if small is too small, then small=temp
-     * 
-     * //if small is too big, then big=temp } }
-     */
+
+    public static void root2(NaturalNumber n, int r) {
+        assert n != null : "Violation of: n is  not null";
+        assert r >= 2 : "Violation of: r >= 2";
+
+        // TODO - fill in body
+        boolean tooBig = true;
+        boolean tooSmall = true;
+        NaturalNumber min = new NaturalNumber2(0);
+        NaturalNumber max = new NaturalNumber2(n);
+        NaturalNumber one = new NaturalNumber2(1);
+        NaturalNumber sub = max;
+        sub.subtract(min);
+        if (sub.equals(one)) {
+
+        }
+    }
+
+    //if small is too big, then big=temp
 
     /**
      * Main method.
