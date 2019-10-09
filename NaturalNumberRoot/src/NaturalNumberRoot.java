@@ -72,7 +72,7 @@ public final class NaturalNumberRoot {
         NaturalNumber one = new NaturalNumber2(1);
         NaturalNumber sub = max;
         sub.subtract(min);
-        if (sub.equals(one)) {
+        while (sub.compareTo(one) > 0) {
 
         }
     }
