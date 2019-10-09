@@ -18,36 +18,6 @@ public final class NaturalNumberRoot {
     private NaturalNumberRoot() {
     }
 
-    public static void root(NaturalNumber n, int r) {
-        NaturalNumber mid = new NaturalNumber2(2);
-        NaturalNumber high = new NaturalNumber2(n);
-        NaturalNumber low = new NaturalNumber2(0);
-        NaturalNumber spec = new NaturalNumber2(1);
-        NaturalNumber root = new NaturalNumber2();
-        NaturalNumber pow = new NaturalNumber2();
-        high.increment();
-        NaturalNumber interval = new NaturalNumber2(high);
-        interval.subtract(low);
-
-        while (interval.compareTo(spec) > 0) {
-            root.copyFrom(low);
-            root.add(high);
-            root.divide(mid);
-
-            pow.copyFrom(root);
-            pow.power(r);
-            if (n.compareTo(pow) < 0) {
-                high.copyFrom(root);
-            } else {
-                low.copyFrom(root);
-            }
-            interval.copyFrom(high);
-            interval.subtract(low);
-        }
-        n.copyFrom(low);
-
-    }
-
     /**
      * Updates {@code n} to the {@code r}-th root of its incoming value.
      *
@@ -60,24 +30,36 @@ public final class NaturalNumberRoot {
      * @ensures n ^ (r) <= #n < (n + 1) ^ (r)
      */
 
-    public static void root2(NaturalNumber n, int r) {
+    public static void root(NaturalNumber n, int r) {
         assert n != null : "Violation of: n is  not null";
         assert r >= 2 : "Violation of: r >= 2";
 
         // TODO - fill in body
-        boolean tooBig = true;
-        boolean tooSmall = true;
         NaturalNumber min = new NaturalNumber2(0);
         NaturalNumber max = new NaturalNumber2(n);
         NaturalNumber one = new NaturalNumber2(1);
-        NaturalNumber sub = max;
+        NaturalNumber two = new NaturalNumber2(2);
+        max.increment();
+        NaturalNumber sub = new NaturalNumber2(max);
+        NaturalNumber temp = new NaturalNumber2();
         sub.subtract(min);
+
         while (sub.compareTo(one) > 0) {
-
+            temp = new NaturalNumber2(max);
+            temp.add(min);
+            temp.divide(two); //calculate middle value of max and min
+            NaturalNumber pow = new NaturalNumber2(temp);
+            pow.power(r);
+            if (n.compareTo(pow) < 0) { //n is smaller than medium
+                max.copyFrom(temp);
+            } else { //n is bigger than medium
+                min.copyFrom(temp);
+            }
+            sub.copyFrom(max);
+            sub.subtract(min); //update max-min
         }
+        n.copyFrom(min);
     }
-
-    //if small is too big, then big=temp
 
     /**
      * Main method.
