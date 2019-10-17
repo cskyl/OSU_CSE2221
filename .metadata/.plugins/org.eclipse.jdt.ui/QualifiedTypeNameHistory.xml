@@ -2,12 +2,12 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="components.utilities.FormatChecker"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
-<fullyQualifiedTypeName name="components.naturalnumber.NaturalNumber"/>
-<fullyQualifiedTypeName name="components.naturalnumber.NaturalNumber2"/>
 <fullyQualifiedTypeName name="components.simplereader.SimpleReader"/>
 <fullyQualifiedTypeName name="components.simplereader.SimpleReader1L"/>
 <fullyQualifiedTypeName name="components.simplewriter.SimpleWriter"/>
 <fullyQualifiedTypeName name="components.simplewriter.SimpleWriter1L"/>
 <fullyQualifiedTypeName name="components.naturalnumber.NaturalNumber3"/>
 <fullyQualifiedTypeName name="components.xmltree.XMLTree"/>
+<fullyQualifiedTypeName name="components.naturalnumber.NaturalNumber"/>
+<fullyQualifiedTypeName name="components.naturalnumber.NaturalNumber2"/>
 </qualifiedTypeNameHistroy>
