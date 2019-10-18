@@ -27,6 +27,21 @@ public final class ProgramWithIO {
      * @return the number of digits of {@code n}
      * @ensures numberOfDigits = [number of digits of n]
      */
+    private static int numberOfDigits2(NaturalNumber n) {
+        int digits = 0;
+
+        int last = n.divideBy10();
+
+        if (n.isZero()) {
+            digits = 1;
+        } else {
+            digits = 1 + numberOfDigits2(n);
+        }
+        n.multiplyBy10(last);
+
+        return digits;
+    }
+
     private static int numberOfDigits(NaturalNumber n) {
         int temp = 0;
         int number = 0;
