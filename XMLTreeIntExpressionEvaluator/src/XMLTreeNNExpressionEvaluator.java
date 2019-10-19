@@ -1,3 +1,5 @@
+import components.naturalnumber.NaturalNumber;
+import components.naturalnumber.NaturalNumber2;
 import components.simplereader.SimpleReader;
 import components.simplereader.SimpleReader1L;
 import components.simplewriter.SimpleWriter;
@@ -11,12 +13,12 @@ import components.xmltree.XMLTree1;
  * @author Tony Han
  *
  */
-public final class XMLTreeIntExpressionEvaluator {
+public final class XMLTreeNNExpressionEvaluator {
 
     /**
      * Private constructor so this utility class cannot be instantiated.
      */
-    private XMLTreeIntExpressionEvaluator() {
+    private XMLTreeNNExpressionEvaluator() {
     }
 
     /**
@@ -31,13 +33,12 @@ public final class XMLTreeIntExpressionEvaluator {
      * </pre>
      * @ensures evaluate = [the value of the expression]
      */
-    private static int evaluate(XMLTree exp) {
+
+    private static NaturalNumber evaluate(XMLTree exp) {
         assert exp != null : "Violation of: exp is not null";
 
-        int result = 0;
-        // TODO - fill in body
+        NaturalNumber result = new NaturalNumber2();
         if (exp.isTag()) {
-
             if (exp.child(0).label().equals("number")) {
                 if (exp.child(1).label().equals("number")) {
                     result = calc(exp.child(0).attributeValue("value"),
@@ -56,10 +57,6 @@ public final class XMLTreeIntExpressionEvaluator {
                 }
             }
         }
-        /*
-         * This line added just to make the program compilable. Should be
-         * replaced with appropriate return statement.
-         */
         return result;
     }
 
@@ -67,35 +64,71 @@ public final class XMLTreeIntExpressionEvaluator {
      * Calculate the value of the given expression
      *
      * @param a
-     *            the first number (can be either a String or an int)
+     *            the first number (can be either a String or a NaturalNumber)
      *
      * @param b
-     *            the second number (can be either a String or an int)
+     *            the second number (can be either a String or a NaturalNumber)
+     *
+     * @param symbol
+     *            the symbol of the expression
+     * @return the value of the expression
+     * @requires
+     * @ensures calc = [the value of the expression]
+     */
+    private static NaturalNumber calc(String a, NaturalNumber b,
+            String symbol) {
+        assert !(symbol.equals("divide")
+                && b.isZero()) : "Violation of: Denominator can not be zero";
+
+        NaturalNumber valA = new NaturalNumber2(a);
+        if (symbol.equals("plus")) {
+            valA.add(b);
+        }
+        if (symbol.equals("minus")) {
+            valA.subtract(b);
+        }
+        if (symbol.equals("times")) {
+            valA.multiply(b);
+        }
+        if (symbol.equals("divide")) {
+            valA.divide(b);
+        }
+
+        return valA;
+    }
+
+    /**
+     * Calculate the value of the given expression
+     *
+     * @param a
+     *            the first number (can be either a String or a NaturalNumber)
+     *
+     * @param b
+     *            the second number (can be either a String or a NaturalNumber)
      *
      * @param symbol
      *            the symbol of the expression
      * @return the value of the expression
      * @ensures calc = [the value of the expression]
      */
-
-    private static int calc(int a, String b, String symbol) {
+    private static NaturalNumber calc(NaturalNumber a, String b,
+            String symbol) {
         assert !(symbol.equals("divide")
                 && b.equals("0")) : "Violation of: Denominator can not be zero";
 
-        int result = 0;
-        int valB = Integer.parseInt(b);
-
+        NaturalNumber result = new NaturalNumber2(a);
+        NaturalNumber valB = new NaturalNumber2(b);
         if (symbol.equals("plus")) {
-            result = a + valB;
+            result.add(valB);
         }
         if (symbol.equals("minus")) {
-            result = a - valB;
+            result.subtract(valB);
         }
         if (symbol.equals("times")) {
-            result = a * valB;
+            result.multiply(valB);
         }
         if (symbol.equals("divide")) {
-            result = a / valB;
+            result.divide(valB);
         }
 
         return result;
@@ -105,110 +138,71 @@ public final class XMLTreeIntExpressionEvaluator {
      * Calculate the value of the given expression
      *
      * @param a
-     *            the first number (can be either a String or an int)
+     *            the first number (can be either a String or a NaturalNumber)
      *
      * @param b
-     *            the second number (can be either a String or an int)
+     *            the second number (can be either a String or a NaturalNumber)
      *
      * @param symbol
      *            the symbol of the expression
      * @return the value of the expression
      * @ensures calc = [the value of the expression]
      */
-    private static int calc(String a, int b, String symbol) {
-        assert !(symbol.equals("divide")
-                && b != 0) : "Violation of: Denominator can not be zero";
-
-        int result = 0;
-        int valA = Integer.parseInt(a);
-
-        if (symbol.equals("plus")) {
-            result = valA + b;
-        }
-        if (symbol.equals("minus")) {
-            result = valA - b;
-        }
-        if (symbol.equals("times")) {
-            result = valA * b;
-        }
-        if (symbol.equals("divide")) {
-            result = valA / b;
-        }
-
-        return result;
-    }
-
-    /**
-     * Calculate the value of the given expression
-     *
-     * @param a
-     *            the first number (can be either a String or an int)
-     *
-     * @param b
-     *            the second number (can be either a String or an int)
-     *
-     * @param symbol
-     *            the symbol of the expression
-     * @return the value of the expression
-     * @ensures calc = [the value of the expression]
-     */
-    private static int calc(String a, String b, String symbol) {
+    private static NaturalNumber calc(String a, String b, String symbol) {
         assert !(symbol.equals("divide")
                 && b.equals("0")) : "Violation of: Denominator can not be zero";
 
-        int result = 0;
-        int valA = Integer.parseInt(a);
-        int valB = Integer.parseInt(b);
+        NaturalNumber valA = new NaturalNumber2(a);
+        NaturalNumber valB = new NaturalNumber2(b);
         if (symbol.equals("plus")) {
-            result = valA + valB;
+            valA.add(valB);
         }
         if (symbol.equals("minus")) {
-            result = valA - valB;
+            valA.subtract(valB);
         }
         if (symbol.equals("times")) {
-            result = valA * valB;
+            valA.multiply(valB);
         }
         if (symbol.equals("divide")) {
-            result = valA / valB;
+            valA.divide(valB);
         }
 
-        return result;
+        return valA;
     }
 
     /**
      * Calculate the value of the given expression
      *
      * @param a
-     *            the first number (can be either a String or an int)
+     *            the first number (can be either a String or a NaturalNumber)
      *
      * @param b
-     *            the second number (can be either a String or an int)
+     *            the second number (can be either a String or a NaturalNumber)
      *
      * @param symbol
      *            the symbol of the expression
      * @return the value of the expression
      * @ensures calc = [the value of the expression]
      */
-    private static int calc(int a, int b, String symbol) {
+    private static NaturalNumber calc(NaturalNumber a, NaturalNumber b,
+            String symbol) {
         assert !(symbol.equals("divide")
-                && b == 0) : "Violation of: Denominator can not be zero";
-
-        int result = 0;
-
+                && b.isZero()) : "Violation of: Denominator can not be zero";
+        NaturalNumber valA = new NaturalNumber2(a);
         if (symbol.equals("plus")) {
-            result = a + b;
+            valA.add(b);
         }
         if (symbol.equals("minus")) {
-            result = a - b;
+            valA.subtract(b);
         }
         if (symbol.equals("times")) {
-            result = a * b;
+            valA.multiply(b);
         }
         if (symbol.equals("divide")) {
-            result = a / b;
+            valA.divide(b);
         }
 
-        return result;
+        return valA;
     }
 
     /**

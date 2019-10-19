@@ -1,0 +1,15 @@
+<expression>
+  <plus>
+    <divide>
+      <times>
+        <number value="12" />
+        <minus>
+          <number value="7" />
+          <number value="3" />
+        </minus>
+      </times>
+      <number value="6" />
+    </divide>
+    <number value="8" />
+  </plus>
+</expression>
