@@ -4,6 +4,7 @@ import components.simplereader.SimpleReader;
 import components.simplereader.SimpleReader1L;
 import components.simplewriter.SimpleWriter;
 import components.simplewriter.SimpleWriter1L;
+import components.xmltree.XMLTree;
 
 /**
  * Put a short phrase describing the program here.
@@ -102,6 +103,36 @@ public final class ProgramWithIO {
                     * Math.pow(10, digit.length - i));
         }
         return number;
+    }
+
+    /**
+     * Reports whether the given tag appears in the given {@code XMLTree}.
+     *
+     * @param xml
+     *            the {@code XMLTree}
+     * @param tag
+     *            the tag name
+     * @return true if the given tag appears in the given {@code XMLTree}, false
+     *         otherwise
+     * @ensures <pre>
+     * findTag =
+     *    [true if the given tag appears in the given {@code XMLTree}, false otherwise]
+     * </pre>
+     */
+    private static boolean findTag(XMLTree xml, String tag) {
+        boolean hasTag = false;
+        if (!hasTag) {
+            if (xml.isTag()) {
+                if (xml.label() != tag) {
+                    hasTag = true;
+                } else {
+                    for (int i = 0; i < xml.numberOfChildren(); i++) {
+                        hasTag = findTag(xml.child(i), tag);
+                    }
+                }
+            }
+        }
+        return hasTag;
     }
 
     /**
