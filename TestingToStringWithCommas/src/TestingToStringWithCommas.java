@@ -11,14 +11,15 @@ import components.simplewriter.SimpleWriter1L;
  * @author Put your name here
  *
  */
-public final class ProgramWithIO {
+public final class TestingToStringWithCommas {
 
     /**
      * Private constructor so this utility class cannot be instantiated.
      */
-    private ProgramWithIO() {
+    private TestingToStringWithCommas() {
     }
 
+    
     /**
      * Converts the given {@code NaturalNumber} to a {@code String} with commas.
      *
@@ -43,7 +44,8 @@ public final class ProgramWithIO {
         }
         return str;
     }
-
+    
+    
     /**
      * Main method.
      *
@@ -59,13 +61,6 @@ public final class ProgramWithIO {
         /*
          * Close input and output streams
          */
-        NaturalNumber n = new NaturalNumber2(123456789);
-        String str = "";
-
-        str = toStringWithCommas(n);
-
-        out.println(str);
-
         in.close();
         out.close();
     }
