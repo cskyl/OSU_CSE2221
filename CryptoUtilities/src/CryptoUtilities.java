@@ -100,16 +100,14 @@ public final class CryptoUtilities {
          * Use Euclid's algorithm; in pseudocode: if m = 0 then GCD(n, m) = n
          * else GCD(n, m) = GCD(m, n mod m)
          */
-        NaturalNumber temp = new NaturalNumber2(m);
-        if (m.isZero()) {
-
-        } else {
-            m = new NaturalNumber2(n.divide(m));
-            n = new NaturalNumber2(temp);
+        if (!m.isZero() && !(n.compareTo(m) == 0)) {
+            NaturalNumber temp = new NaturalNumber2();
+            temp = n.divide(m);
+            reduceToGCD(m, temp);
+            n.copyFrom(m);
         }
 
-        // TODO - fill in body
-
+        m.clear();
     }
 
     /**
@@ -148,55 +146,41 @@ public final class CryptoUtilities {
             NaturalNumber m) {
         assert m.compareTo(new NaturalNumber2(1)) > 0 : "Violation of: m > 1";
 
-        NaturalNumber p2 = new NaturalNumber2(p);
-        NaturalNumber n_temp = new NaturalNumber2(n);
-        NaturalNumber one = new NaturalNumber2(1);
-        NaturalNumber n1 = new NaturalNumber2();
-        NaturalNumber n2 = new NaturalNumber2();
-        NaturalNumber n3 = new NaturalNumber2();
-
-        /*
-         * Use the fast-powering algorithm as previously discussed in class,
-         * with the additional feature that every multiplication is followed
-         * immediately by "reducing the result modulo m"
-         */
         if (p.isZero()) {
-            n_temp = one.divide(m);
-        } else if (p.equals(NN_ONE)) {
-            n_temp = n_temp.divide(m);
-        } else if (isEven(p)) {
-            p.divide(NN_TWO);
-            powerMod(n_temp, p, m);
-            n1.copyFrom(n);
-            p.divide(NN_TWO);
-            powerMod(n_temp, p, m);
-            n2.copyFrom(n_temp);
+            n.setFromInt(1);
+        } else {
 
-            n_temp.copyFrom(n1);
-            n_temp.multiply(n2);
+            if (isEven(p)) {
+                p.divide(NN_TWO);
+                powerMod(n, p, m);
+                NaturalNumber temp = new NaturalNumber2();
+                temp.copyFrom(n);
+                n.multiply(temp);
 
-            n_temp = n_temp.divide(m);
-        } else if (!isEven(p)) {
-            p.divide(NN_TWO);
-            powerMod(n_temp, p, m);
-            n1.copyFrom(n_temp);
-            p.divide(NN_TWO);
-            powerMod(n_temp, p, m);
-            n2.copyFrom(n_temp);
-            n_temp.divide(m);
-            n3.copyFrom(n_temp);
+                p.multiply(NN_TWO); //restore p
 
-            n_temp.copyFrom(n1);
-            n_temp.multiply(n2);
-            n_temp.multiply(n3);
+            } else {
+                p.divide(NN_TWO);
+                NaturalNumber n_copy = new NaturalNumber2();
+                n_copy.copyFrom(n);
+                powerMod(n, p, m);
+                NaturalNumber temp = new NaturalNumber2();
+                NaturalNumber mod1 = new NaturalNumber2();
+                mod1 = n_copy.divide(m);
+                temp.copyFrom(n);
+                n.multiply(temp);
+                n.multiply(mod1);
 
-            n_temp = n_temp.divide(m);
+                p.multiply(NN_TWO);
+                p.add(NN_ONE);
+            }
 
+            NaturalNumber mod = new NaturalNumber2();
+            mod = n.divide(m);
+            n.copyFrom(mod);
         }
-
-        p.copyFrom(p2);
-        n.copyFrom(n_temp);
-
+        //SimpleWriter out = new SimpleWriter1L();
+        //out.println("Exit with n= " + n.toString());
     }
 
     /**
@@ -224,12 +208,31 @@ public final class CryptoUtilities {
         n.increment();
 
         // TODO - fill in body
+        boolean isWitness = false;
+
+        NaturalNumber temp = new NaturalNumber2();
+        NaturalNumber temp2 = new NaturalNumber2();
+        NaturalNumber power = new NaturalNumber2();
+
+        power.copyFrom(n);
+        power.decrement();
+
+        temp.copyFrom(w);
+        temp2.copyFrom(w);
+
+        temp2.multiply(w);
+        temp.copyFrom(temp2);
+        temp2.divide(w);
+        powerMod(temp2, power, n);
+        if (temp.divide(n).equals(NN_ONE) || !temp2.equals(NN_ONE)) {
+            isWitness = true;
+        }
 
         /*
          * This line added just to make the program compilable. Should be
          * replaced with appropriate return statement.
          */
-        return true;
+        return isWitness;
     }
 
     /**
@@ -297,12 +300,39 @@ public final class CryptoUtilities {
          */
 
         // TODO - fill in body
+        boolean isPrime = true;
+        int j = 0;
 
+        if (n.compareTo(new NaturalNumber2(THREE)) <= 0) {
+            isPrime = true;
+        } else if (isEven(n)) {
+            isPrime = false;
+
+        } else {
+
+            NaturalNumber[] candidate = new NaturalNumber2[10];
+            NaturalNumber temp = new NaturalNumber2();
+            temp.copyFrom(n);
+            temp.subtract(NN_TWO);
+            for (int i = 0; i < candidate.length; i++) {
+                candidate[i] = randomNumber(temp);
+                while (candidate[i].compareTo(NN_TWO) <= 0) {
+                    candidate[i] = randomNumber(temp);
+                }
+            }
+
+            do {
+                if (isWitnessToCompositeness(candidate[j], n)) {
+                    isPrime = false;
+                }
+                j++;
+            } while (isPrime == true && j < candidate.length);
+        }
         /*
          * This line added just to make the program compilable. Should be
          * replaced with appropriate return statement.
          */
-        return true;
+        return isPrime;
     }
 
     /**
@@ -321,6 +351,19 @@ public final class CryptoUtilities {
          * Use isPrime2 to check numbers, starting at n and increasing through
          * the odd numbers only (why?), until n is likely prime
          */
+        boolean isPrime = false;
+        NaturalNumber nextPrime = new NaturalNumber2();
+        nextPrime.copyFrom(n);
+        if (isEven(nextPrime)) {
+            nextPrime.increment();
+        }
+        isPrime = isPrime2(nextPrime);
+        while (!isPrime) {
+            nextPrime.add(NN_TWO);
+            isPrime = isPrime2(nextPrime);
+        }
+
+        n.copyFrom(nextPrime);
 
         // TODO - fill in body
 
@@ -332,7 +375,7 @@ public final class CryptoUtilities {
      * @param args
      *            the command line arguments
      */
-    public static void main2(String[] args) {
+    public static void main(String[] args) {
         SimpleReader in = new SimpleReader1L();
         SimpleWriter out = new SimpleWriter1L();
 
@@ -391,21 +434,6 @@ public final class CryptoUtilities {
         /*
          * Close input and output streams
          */
-        in.close();
-        out.close();
-    }
-
-    public static void main(String[] args) {
-        SimpleReader in = new SimpleReader1L();
-        SimpleWriter out = new SimpleWriter1L();
-
-        NaturalNumber a = new NaturalNumber2(5);
-        NaturalNumber b = new NaturalNumber2(2);
-        NaturalNumber c = new NaturalNumber2(7);
-
-        powerMod(a, b, c);
-
-        out.print(a.toString());
         in.close();
         out.close();
     }

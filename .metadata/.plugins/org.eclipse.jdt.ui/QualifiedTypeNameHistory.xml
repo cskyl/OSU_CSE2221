@@ -4,11 +4,14 @@
 <fullyQualifiedTypeName name="java.lang.Character"/>
 <fullyQualifiedTypeName name="components.simplereader.SimpleReader"/>
 <fullyQualifiedTypeName name="components.simplereader.SimpleReader1L"/>
-<fullyQualifiedTypeName name="components.simplewriter.SimpleWriter"/>
-<fullyQualifiedTypeName name="components.simplewriter.SimpleWriter1L"/>
 <fullyQualifiedTypeName name="components.naturalnumber.NaturalNumber3"/>
 <fullyQualifiedTypeName name="components.xmltree.XMLTree"/>
-<fullyQualifiedTypeName name="components.naturalnumber.NaturalNumber"/>
 <fullyQualifiedTypeName name="components.naturalnumber.NaturalNumber2"/>
 <fullyQualifiedTypeName name="components.naturalnumber.NaturalNumber1L"/>
+<fullyQualifiedTypeName name="components.queue.Queue"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="components.queue.Queue1L"/>
+<fullyQualifiedTypeName name="components.simplewriter.SimpleWriter"/>
+<fullyQualifiedTypeName name="components.simplewriter.SimpleWriter1L"/>
+<fullyQualifiedTypeName name="components.naturalnumber.NaturalNumber"/>
 </qualifiedTypeNameHistroy>
