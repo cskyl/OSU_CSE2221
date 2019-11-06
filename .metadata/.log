@@ -7707,3 +7707,28 @@ java.net.SocketException: Connection reset
 	at org.eclipse.eclemma.internal.core.MemoryExecutionDataSource.readFrom(MemoryExecutionDataSource.java:68)
 	at org.eclipse.eclemma.internal.core.launching.AgentServer.run(AgentServer.java:114)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2019-11-04 17:27:21.873 -----------------------------------------------
+eclipse.buildId=4.11.0.I20190307-0500
+java.version=1.8.0_221
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.core 1 0 2019-11-04 17:27:28.865
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-11-04 17:27:40.305
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\tony3'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.github.spotbugs.plugin.eclipse 1 0 2019-11-06 09:03:57.233
+!MESSAGE creating new bug collection: C:\Users\tony3\Documents\workspace\.metadata\.plugins\com.github.spotbugs.plugin.eclipse\HW17.fbwarnings.xml
+
+!ENTRY com.github.spotbugs.plugin.eclipse 2 2 2019-11-06 09:28:13.257
+!MESSAGE The following classes needed for SpotBugs analysis on project HW17 were missing:
+!SUBENTRY 1 com.github.spotbugs.plugin.eclipse 2 0 2019-11-06 09:28:13.257
+!MESSAGE T
