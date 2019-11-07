@@ -1,4 +1,5 @@
 import components.queue.Queue;
+import components.queue.Queue1L;
 import components.simplereader.SimpleReader;
 import components.simplereader.SimpleReader1L;
 import components.simplewriter.SimpleWriter;
@@ -41,6 +42,9 @@ public final class ProgramWithIO {
     public static void main(String[] args) {
         SimpleReader in = new SimpleReader1L();
         SimpleWriter out = new SimpleWriter1L();
+
+        Queue q1 = new Queue1L();
+
         /*
          * Put your main program code here
          */

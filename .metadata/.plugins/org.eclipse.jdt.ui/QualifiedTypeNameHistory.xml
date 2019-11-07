@@ -9,10 +9,11 @@
 <fullyQualifiedTypeName name="components.naturalnumber.NaturalNumber2"/>
 <fullyQualifiedTypeName name="components.naturalnumber.NaturalNumber1L"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
-<fullyQualifiedTypeName name="components.queue.Queue1L"/>
 <fullyQualifiedTypeName name="components.simplewriter.SimpleWriter"/>
 <fullyQualifiedTypeName name="components.simplewriter.SimpleWriter1L"/>
 <fullyQualifiedTypeName name="components.naturalnumber.NaturalNumber"/>
 <fullyQualifiedTypeName name="components.queue.Queue2"/>
 <fullyQualifiedTypeName name="components.queue.Queue"/>
+<fullyQualifiedTypeName name="components.queue.Queue1L"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
 </qualifiedTypeNameHistroy>
