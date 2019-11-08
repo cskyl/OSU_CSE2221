@@ -41,31 +41,37 @@ public final class Queue1LSort1 extends Queue1L<String> {
         assert q != null : "Violation of: q is not null";
         assert order != null : "Violation of: order is not null";
 
-        // TODO - fill in body
+        String min = "";
+        for (String item : q) {
+            if (min.equals("")) {
+                min = item;//init
+            }
+            int compare = order.compare(min, item);
+            if (compare < 0) {//min < item
+                min = item;
+            }
+        }
 
-        /*
-         * This line added just to make the program compilable. Should be
-         * replaced with appropriate return statement.
-         */
-        return "";
+        Queue<String> temp = q.newInstance();
+        temp.transferFrom(q);
+        while (temp.length() != 0) {
+            String tempStr = temp.dequeue();
+            if (!tempStr.equals(min)) {
+                q.enqueue(tempStr);
+            }
+        }
+        return min;
     }
 
     @Override
     public void sort(Comparator<String> order) {
         assert order != null : "Violation of: order is not null";
-        String[] temp = new String[this.length()];
-        this.clear();
-        for (int i = 0; i < temp.length; i++) {
-            for (int j = i - 1; j > 0; i--) {
-                int small = order.compare(temp[j], temp[j + 1]);
-                if (small == -1) {
-                    String tempStr = temp[j];
-                    temp[j] = temp[j + 1];
-                    temp[j + 1] = tempStr;
-                }
-            }
-        }
         // TODO - fill in body
+        if (this.length() != 0) {
+            String str = removeMin(this, order);
+            this.sort(order);
+            this.enqueue(str);
+        }
 
     }
 
