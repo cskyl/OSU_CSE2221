@@ -4,6 +4,8 @@ import org.junit.Test;
 
 import components.set.Set;
 import components.set.Set1L;
+import components.simplereader.SimpleReader;
+import components.simplereader.SimpleReader1L;
 import components.simplewriter.SimpleWriter;
 import components.simplewriter.SimpleWriter1L;
 
@@ -30,8 +32,8 @@ public class StringReassemblyTest {
         String str2 = "bucks!";
         String str3 = "Go bucks! Beat Michigan!";
 
-        Set<String> ans = new Set1L();
-        Set<String> test = new Set1L();
+        Set<String> ans = new Set1L<String>();
+        Set<String> test = new Set1L<String>();
 
         ans.add(str3);
         ans.add("5");
@@ -48,6 +50,44 @@ public class StringReassemblyTest {
 
         out.close();
         assertEquals(ans, test);
+    }
+
+    @Test
+    public void linesFromInputTest() {
+        SimpleReader in = new SimpleReader1L("test.txt");
+        SimpleWriter out = new SimpleWriter1L();
+        Set<String> testSet = new Set1L<String>();
+        Set<String> ansSet = new Set1L<String>();
+
+        testSet = StringReassembly.linesFromInput(in);
+
+        String str1 = "Bucks -- Beat";
+        String str2 = "Go Bucks";
+        String str3 = "o Bucks -- B";
+        String str4 = "Beat Mich";
+        String str5 = "ichigan~";
+        String str6 = "Bucks";
+        String str7 = "Michigan~";
+        ansSet.add(str1);
+        ansSet.add(str2);
+        ansSet.add(str3);
+        ansSet.add(str4);
+        ansSet.add(str7);
+
+        out.println(testSet.toString());
+        out.println(ansSet.toString());
+
+        out.close();
+
+        assertEquals(ansSet, testSet);
+
+    }
+
+    @Test
+    public void printWithLineSeparatorsTest() {
+        String text = "abc~edf";
+        SimpleWriter out = new SimpleWriter1L();
+        StringReassembly.printWithLineSeparators(text, out);
     }
 
 }

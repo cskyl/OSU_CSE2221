@@ -8,7 +8,7 @@ import components.simplewriter.SimpleWriter1L;
 /**
  * Utility class to support string reassembly from fragments.
  *
- * @author Put your name here
+ * @author Tony Han
  *
  * @mathdefinitions <pre>
  *
@@ -139,14 +139,9 @@ public final class StringReassembly {
          * Hint: consider using substring (a String method)
          */
 
-        // TODO: fill in body
         String resultStr;
         resultStr = str1.substring(0, str1.length() - overlap) + str2;
 
-        /*
-         * This line added just to make the program compilable. Should be
-         * replaced with appropriate return statement.
-         */
         return resultStr;
     }
 
@@ -175,23 +170,25 @@ public final class StringReassembly {
         /*
          * Note: Precondition not checked!
          */
-        boolean StrIsSubstringOfItem = false;
+        boolean strIsSubstringOfItem = false;
+        boolean added = false;
         Set<String> strCheck = strSet.newInstance();
         strCheck.transferFrom(strSet);
 
         for (String strInSet : strCheck) {
-            if (str.indexOf(strInSet) < 0) {//removes string that is a substr of str
+            if (str.indexOf(strInSet) < 0) {
                 strSet.add(strInSet);
             }
         }
 
-        for (String strInSet : strCheck) {//add str if it is not a substr of any string in strSet
-            if (strInSet.indexOf(str) > 0 && !StrIsSubstringOfItem) {
-                StrIsSubstringOfItem = true;
+        for (String strInSet : strCheck) {
+            if (strInSet.indexOf(str) > 0 && !strIsSubstringOfItem) {
+                strIsSubstringOfItem = true;
             }
-            if (strInSet.indexOf(str) < 0 && !StrIsSubstringOfItem) {
-                strSet.add(str);
-            }
+
+        }
+        if (!strIsSubstringOfItem) {
+            strSet.add(str);
         }
 
         if (strSet.size() == 0) {
@@ -218,17 +215,10 @@ public final class StringReassembly {
         assert input != null : "Violation of: input is not null";
         assert input.isOpen() : "Violation of: input.is_open";
 
-        // TODO: fill in body
-        Set<String> inputStr = new Set1L();
+        Set<String> inputStr = new Set1L<String>();
         while (!input.atEOS()) {
-            String tempStr = input.nextLine();
-            addToSetAvoidingSubstrings(inputStr, tempStr);
+            addToSetAvoidingSubstrings(inputStr, input.nextLine());
         }
-
-        /*
-         * This line added just to make the program compilable. Should be
-         * replaced with appropriate return statement.
-         */
         return inputStr;
     }
 
@@ -384,8 +374,15 @@ public final class StringReassembly {
         assert text != null : "Violation of: text is not null";
         assert out != null : "Violation of: out is not null";
         assert out.isOpen() : "Violation of: out.is_open";
-
-        // TODO: fill in body
+        String tempText = text;
+        for (int i = 0; i < tempText.length(); i++) {
+            if (tempText.charAt(i) == '~') {
+                String firstHalf = tempText.substring(0, i);
+                String secondHalf = tempText.substring(i + 1);
+                tempText = firstHalf + System.lineSeparator() + secondHalf;
+            }
+        }
+        out.print(tempText);
 
     }
 
