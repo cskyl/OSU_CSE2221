@@ -8,7 +8,6 @@
 <fullyQualifiedTypeName name="components.naturalnumber.NaturalNumber1L"/>
 <fullyQualifiedTypeName name="components.naturalnumber.NaturalNumber"/>
 <fullyQualifiedTypeName name="components.queue.Queue2"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="components.queue.Queue"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
 <fullyQualifiedTypeName name="components.queue.Queue1L"/>
@@ -17,8 +16,12 @@
 <fullyQualifiedTypeName name="components.set.Set"/>
 <fullyQualifiedTypeName name="components.set.Set1L"/>
 <fullyQualifiedTypeName name="StringReassemblyTest"/>
-<fullyQualifiedTypeName name="StringReassembly"/>
 <fullyQualifiedTypeName name="components.simplereader.SimpleReader"/>
 <fullyQualifiedTypeName name="components.simplereader.SimpleReader1L"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="components.stack.Stack"/>
+<fullyQualifiedTypeName name="components.stack.Stack1L"/>
+<fullyQualifiedTypeName name="components.sequence.Sequence"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="StringReassembly"/>
 </qualifiedTypeNameHistroy>

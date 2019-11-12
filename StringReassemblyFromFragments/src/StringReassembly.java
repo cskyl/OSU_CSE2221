@@ -170,28 +170,19 @@ public final class StringReassembly {
         /*
          * Note: Precondition not checked!
          */
-        boolean strIsSubstringOfItem = false;
-        boolean added = false;
-        Set<String> strCheck = strSet.newInstance();
-        strCheck.transferFrom(strSet);
+        boolean isNotSubStr = true;
+        Set<String> subString = strSet.newInstance();
 
-        for (String strInSet : strCheck) {
-            if (str.indexOf(strInSet) < 0) {
-                strSet.add(strInSet);
+        for (String item : strSet) {
+            isNotSubStr = isNotSubStr & item.indexOf(str) < 0;
+        }
+        if (isNotSubStr) {
+            for (String item : strSet) {
+                if (str.indexOf(item) >= 0) {
+                    subString.add(item);
+                }
             }
-        }
-
-        for (String strInSet : strCheck) {
-            if (strInSet.indexOf(str) > 0 && !strIsSubstringOfItem) {
-                strIsSubstringOfItem = true;
-            }
-
-        }
-        if (!strIsSubstringOfItem) {
-            strSet.add(str);
-        }
-
-        if (strSet.size() == 0) {
+            strSet.remove(subString);
             strSet.add(str);
         }
 
@@ -379,7 +370,7 @@ public final class StringReassembly {
             if (tempText.charAt(i) == '~') {
                 String firstHalf = tempText.substring(0, i);
                 String secondHalf = tempText.substring(i + 1);
-                tempText = firstHalf + System.lineSeparator() + secondHalf;
+                tempText = firstHalf + "\n" + secondHalf;
             }
         }
         out.print(tempText);

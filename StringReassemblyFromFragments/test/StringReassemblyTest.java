@@ -85,9 +85,16 @@ public class StringReassemblyTest {
 
     @Test
     public void printWithLineSeparatorsTest() {
-        String text = "abc~edf";
-        SimpleWriter out = new SimpleWriter1L();
+        String text = "abc~edf~fhkjsahfkjahfl~";
+        SimpleWriter out = new SimpleWriter1L(
+                "printWithLineSeparatorsTest.txt");
         StringReassembly.printWithLineSeparators(text, out);
+        out.close();
+        SimpleReader in = new SimpleReader1L("printWithLineSeparatorsTest.txt");
+
+        assertEquals("abc", in.nextLine());
+        assertEquals("edf", in.nextLine());
+        assertEquals("fhkjsahfkjahfl", in.nextLine());
     }
 
 }
