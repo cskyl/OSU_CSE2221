@@ -1,0 +1,11 @@
+extra cheese,75
+onion,95
+potato,95
+ham,120
+pineapple,95
+tomato,95
+anchovy,150
+pepperoni,120
+sausage,120
+mushroom,95
+green pepper,95

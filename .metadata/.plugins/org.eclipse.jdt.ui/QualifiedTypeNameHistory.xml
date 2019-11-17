@@ -11,10 +11,6 @@
 <fullyQualifiedTypeName name="components.queue.Queue"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
 <fullyQualifiedTypeName name="components.queue.Queue1L"/>
-<fullyQualifiedTypeName name="components.simplewriter.SimpleWriter"/>
-<fullyQualifiedTypeName name="components.simplewriter.SimpleWriter1L"/>
-<fullyQualifiedTypeName name="components.set.Set"/>
-<fullyQualifiedTypeName name="components.set.Set1L"/>
 <fullyQualifiedTypeName name="StringReassemblyTest"/>
 <fullyQualifiedTypeName name="components.simplereader.SimpleReader"/>
 <fullyQualifiedTypeName name="components.simplereader.SimpleReader1L"/>
@@ -24,4 +20,10 @@
 <fullyQualifiedTypeName name="components.sequence.Sequence"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="StringReassembly"/>
+<fullyQualifiedTypeName name="components.map.Map"/>
+<fullyQualifiedTypeName name="components.set.Set"/>
+<fullyQualifiedTypeName name="components.set.Set1L"/>
+<fullyQualifiedTypeName name="components.simplewriter.SimpleWriter"/>
+<fullyQualifiedTypeName name="components.simplewriter.SimpleWriter1L"/>
+<fullyQualifiedTypeName name="ProgramWithIO"/>
 </qualifiedTypeNameHistroy>

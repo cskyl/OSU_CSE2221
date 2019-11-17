@@ -1,0 +1,5 @@
+small,795
+medium,995
+large,1295
+biggie,1595
+great biggie,1995
