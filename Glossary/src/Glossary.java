@@ -12,7 +12,8 @@ import components.simplewriter.SimpleWriter;
 import components.simplewriter.SimpleWriter1L;
 
 /**
- * Put a short phrase describing the program here.
+ * This program can generate a set of html files that each includes a term with
+ * definition and an index by given txt file containing terms and definitions
  *
  * @author Tony Han
  *
@@ -25,6 +26,16 @@ public final class Glossary {
     private Glossary() {
     }
 
+    /**
+     * Read lines from given file and convert them into a maps that saves
+     * {@code key} as key, {@code value} as value.
+     *
+     * @param in
+     *            the input file reader
+     * @param Dictionary
+     *            the output map that saves term and definition pairs
+     * @update Dictionary
+     */
     public static void inputData(SimpleReader in,
             Map<String, String> Dictionary) {
         String key = "";
@@ -47,6 +58,14 @@ public final class Glossary {
         }
     }
 
+    /**
+     * Verify if {@code str} is a single word.
+     *
+     * @param str
+     *            given string
+     * @return if {@code str} is a single
+     *
+     */
     public static boolean isSingleWord(String str) {
         boolean isWord = true;
         if (str.length() < 1) {
@@ -61,6 +80,13 @@ public final class Glossary {
         return isWord;
     }
 
+    /**
+     * Verify if {@code str} is a sentence.
+     *
+     * @param str
+     *            the input String
+     * @return if {@code str is a sentence}
+     */
     public static boolean isSentence(String str) {
         boolean isSentence = false;
         if (str.length() < 1) {
@@ -77,6 +103,17 @@ public final class Glossary {
 
     private static class AtoZ implements Comparator<String> {
 
+        /**
+         * compares which String is bigger.
+         *
+         * @param str1
+         *            the first String
+         * @param str2
+         *            the second String
+         * @return 1 if {@code str1} is larger than {@code str2} -1 if
+         *         {@code str1} is larger than {@code str2} 0 if @code str1}
+         *         equals to {@code str2}
+         */
         @Override
         public int compare(String str1, String str2) {
             if (str1.compareTo(str2) > 0) {
@@ -89,6 +126,14 @@ public final class Glossary {
         }
     }
 
+    /**
+     * prints index.html
+     *
+     * @param entries
+     *            all terms that need to be printed with hyperlink
+     * @param filePath
+     *            where to generate file
+     */
     public static void printIndex(Queue<String> entries, String filePath) {
         SimpleWriter index = new SimpleWriter1L(filePath + "/" + "index.html");
         index.print(
@@ -103,6 +148,13 @@ public final class Glossary {
         index.close();
     }
 
+    /**
+     * Extracts terms from the Map and converts them into a sorted Queue.
+     *
+     * @param Dictionary
+     *            the given Map that stores all terms with definition
+     * @return A sorted Queue<String> that stores all terms
+     */
     public static Queue<String> MapToSortedQueue(
             Map<String, String> Dictionary) {
         Queue<String> entries = new Queue1L<String>();
@@ -115,6 +167,14 @@ public final class Glossary {
         return entries;
     }
 
+    /**
+     * Prints all terms, each with "terms".index.
+     *
+     * @param Dictionary
+     *            a Map<String, String> that stores all terms with definitions
+     * @param filePath
+     *            where to generate files
+     */
     public static void printTerms(Map<String, String> Dictionary,
             String filePath) {
         Set<String> terms = new Set1L<String>();
@@ -142,6 +202,15 @@ public final class Glossary {
         }
     }
 
+    /**
+     * Finds all terms in a definition sentence
+     *
+     * @param str
+     *            the given definition
+     * @param Dictionary
+     *            a Map<String, String> that stores all terms
+     * @return a Set<String> that stores all terms exist in the given definition
+     */
     public static Set<String> FindTermsInSentence(String str,
             Map<String, String> Dictionary) {
         Set<String> terms = new Set1L<String>();
@@ -153,10 +222,23 @@ public final class Glossary {
         return terms;
     }
 
+    /**
+     * prints hyperlink for terms in definitions
+     *
+     * @param word
+     *            given terms
+     * @return a String with generated html code
+     */
     public static String generateHyperlink(String word) {
         return "<a href=\"" + word + ".html\">";
     }
 
+    /**
+     * program diver
+     *
+     * @param args
+     *            won't be used in program
+     */
     public static void main(String[] args) {
         SimpleReader in = new SimpleReader1L();
         SimpleWriter out = new SimpleWriter1L();
