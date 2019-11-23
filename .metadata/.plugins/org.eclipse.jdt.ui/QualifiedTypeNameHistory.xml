@@ -15,8 +15,6 @@
 <fullyQualifiedTypeName name="components.simplereader.SimpleReader"/>
 <fullyQualifiedTypeName name="components.simplereader.SimpleReader1L"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="components.stack.Stack"/>
-<fullyQualifiedTypeName name="components.stack.Stack1L"/>
 <fullyQualifiedTypeName name="components.sequence.Sequence"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="StringReassembly"/>
@@ -26,4 +24,11 @@
 <fullyQualifiedTypeName name="components.simplewriter.SimpleWriter"/>
 <fullyQualifiedTypeName name="components.simplewriter.SimpleWriter1L"/>
 <fullyQualifiedTypeName name="ProgramWithIO"/>
+<fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="java.awt.GridLayout"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="components.stack.Stack"/>
+<fullyQualifiedTypeName name="components.stack.Stack1L"/>
+<fullyQualifiedTypeName name="java.awt.Cursor"/>
 </qualifiedTypeNameHistroy>
